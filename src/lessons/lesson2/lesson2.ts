@@ -39,6 +39,20 @@ const sum = (a: number) => {
 // counter2(); // 1
 // counter(); // 3
 
+const makeCounter = () => {
+    let count = 0;
+    return () => {
+        return ++count;
+    }
+}
+
+const counter = makeCounter();
+console.log(counter()); // 1
+console.log(counter()); // 2
+const counter2 = makeCounter();
+console.log(counter2()) // 1
+console.log(counter())  // 3
+
 // Task 03
 // Переписать функцию из Task 02 так, что бы она принимала число в качестве аргумента и это число было стартовым значением счетчика
 // и возвращала следующий объект методов:
