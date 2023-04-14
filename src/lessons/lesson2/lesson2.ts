@@ -39,7 +39,7 @@ const sum = (a: number) => {
 // counter2(); // 1
 // counter(); // 3
 
-const makeCounter = () => {
+/*const makeCounter = () => {
     let count = 0;
     return () => {
         return ++count;
@@ -51,7 +51,7 @@ console.log(counter()); // 1
 console.log(counter()); // 2
 const counter2 = makeCounter();
 console.log(counter2()) // 1
-console.log(counter())  // 3
+console.log(counter())  // 3*/
 
 // Task 03
 // Переписать функцию из Task 02 так, что бы она принимала число в качестве аргумента и это число было стартовым значением счетчика
@@ -60,6 +60,38 @@ console.log(counter())  // 3
 // decrease: -1
 // reset: установить счетчик в 0;
 // set: установить счетчик в заданное значение;
+
+/*const makeCounter = (num: number) => {
+    let startValueCount = num;
+    let counterMethods = {
+        increase() {
+            ++startValueCount
+            return startValueCount
+        },
+        decrease() {
+            --startValueCount
+            return startValueCount
+        },
+        reset() {
+            startValueCount = 0
+            return startValueCount
+        },
+        set() {
+            startValueCount = num
+            return startValueCount
+        },
+        showCount() {
+            console.log(startValueCount)
+            return startValueCount
+        }
+
+    }
+    return counterMethods
+}
+let counter = makeCounter(4)
+
+console.log(counter.set())*/
+
 
 // Task 04*
 // Реализовать функцию superSum которая принимает число в качестве аргумента, которое указывает на количество слагаемых
@@ -71,10 +103,38 @@ console.log(counter())  // 3
 // 5) superSum(3)(2,5)(3) //10
 // 6) superSum(3)(2,5)(3,9) //10
 
+
+const superSum = (num: number) => {
+
+}
+
 // P.S. типизируйте только аргументы, а при вызове функции используйте @ts-ignore
 
 // Task 05
 // решить все задачи по рекурсии которые даны в конце статьи https://learn.javascript.ru/recursion
+
+/*const sumTo = (n: number): number => {
+    if (n <= 1) {
+        return 1
+
+    } else {
+        return n + sumTo(n - 1)
+    }
+}
+console.log(sumTo(1))
+console.log(sumTo(2))
+console.log(sumTo(3))
+console.log(sumTo(4))
+console.log(sumTo(100))*/
+
+const factorial = (n: number): number => {
+    if (n < 1) {
+        return 1
+    } else {
+        return n * factorial(n - 1)
+    }
+}
+console.log(factorial(5));
 
 // Task 06
 // написать функцию, которая повторяет функционал метода flat массива на всю глубину.
