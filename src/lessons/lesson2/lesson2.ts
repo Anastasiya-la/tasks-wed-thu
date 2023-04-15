@@ -1,3 +1,5 @@
+import React from 'react';
+
 console.log('lesson 2');
 
 // Lexical environment
@@ -127,18 +129,24 @@ console.log(sumTo(3))
 console.log(sumTo(4))
 console.log(sumTo(100))*/
 
-const factorial = (n: number): number => {
+/*const factorial = (n: number): number => {
     if (n < 1) {
         return 1
     } else {
         return n * factorial(n - 1)
     }
 }
-console.log(factorial(5));
+console.log(factorial(5));*/
+
+const fib = (n: number): number => {
+    if (n <= 1) {
+        return n
+    } else {
+        return fib(n - 1) + fib(n - 2)
+    }
+}
 
 // Task 06
 // написать функцию, которая повторяет функционал метода flat массива на всю глубину.
 
-// just a plug
-export default () => {
-};
+// just a plug export default () => {};
