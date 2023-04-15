@@ -138,6 +138,7 @@ console.log(sumTo(100))*/
 }
 console.log(factorial(5));*/
 
+/*
 const fib = (n: number): number => {
     if (n <= 1) {
         return n
@@ -145,6 +146,31 @@ const fib = (n: number): number => {
         return fib(n - 1) + fib(n - 2)
     }
 }
+*/
+
+
+let list = {
+    value: 1,
+    next: {
+        value: 2,
+        next: {
+            value: 3,
+            next: {
+                value: 4,
+                next: null
+            }
+        }
+    }
+};
+
+const printList = (list: any) => {
+    alert(list.value);
+    if (list.next) {
+        printList(list.next);
+    }
+}
+printList(list)
+
 
 // Task 06
 // написать функцию, которая повторяет функционал метода flat массива на всю глубину.
