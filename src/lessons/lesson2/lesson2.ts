@@ -163,13 +163,21 @@ let list = {
     }
 };
 
-const printList = (list: any) => {
+/*const printList = (list: any) => {
     alert(list.value);
     if (list.next) {
         printList(list.next);
     }
 }
-printList(list)
+printList(list)*/
+
+const printReverseList = (list: any) => {
+    if (list.next) {
+        printReverseList(list.next)
+    }
+    alert(list.value)
+}
+printReverseList(list)
 
 
 // Task 06
